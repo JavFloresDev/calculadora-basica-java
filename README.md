@@ -54,4 +54,9 @@ Primer número: salir
 
 ## Autor
 
+JavFloresDev
 Jhonny Flores
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
