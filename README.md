@@ -30,7 +30,21 @@ Calculadora simple desarrollada en Java que funciona completamente por consola. 
 
 ## Cómo ejecutar el proyecto
 
-### Opción 1: Ejecutar el JAR ya compilado (la más fácil)
+### Paso 1: Clonar el repositorio
+
+```bash
+git clone https://github.com/JavFloresDev/calculadora-basica-java
+```
+
+### Paso 2: Entrar a la carpeta del proyecto
+
+```bash
+cd calculadora-basica-java
+```
+
+### Paso 3: Elegir una forma de ejecución
+
+#### Opción 1: Ejecutar el JAR ya compilado (la más fácil)
 
 El repositorio incluye una carpeta `dist/` con el archivo `.jar` ya generado. Solo ejecuta:
 
@@ -40,7 +54,7 @@ java -jar dist/calculadora-basica-java.jar
 
 > **Nota:** El nombre exacto del `.jar` puede variar. Revisa el contenido de `dist/` con `ls dist/`.
 
-### Opción 2: Compilar y ejecutar con Apache Ant
+#### Opción 2: Compilar y ejecutar con Apache Ant
 
 Si tienes Ant instalado, desde la raíz del proyecto:
 
@@ -57,7 +71,7 @@ Otros comandos útiles:
 | `ant clean`   | Limpia los archivos compilados       |
 | `ant run`     | Compila y ejecuta el programa        |
 
-### Opción 3: Compilar manualmente con `javac`
+#### Opción 3: Compilar manualmente con `javac`
 
 Si tu archivo `Calculadora.java` está dentro de un paquete (por ejemplo `calculadora`), la estructura sería:
 
@@ -84,7 +98,7 @@ javac -d build/classes src/Calculadora.java
 java -cp build/classes Calculadora
 ```
 
-> **Importante:** Ajusta la ruta según la ubicación real de tu archivo. Puedes verificarla con `find src -name "*.java"`.
+> 💡 **Importante:** Ajusta la ruta según la ubicación real de tu archivo. Puedes verificarla con `find src -name "*.java"`.
 
 ## Ejemplo de uso
 
