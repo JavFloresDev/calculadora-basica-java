@@ -98,7 +98,7 @@ javac -d build/classes src/Calculadora.java
 java -cp build/classes Calculadora
 ```
 
-> 💡 **Importante:** Ajusta la ruta según la ubicación real de tu archivo. Puedes verificarla con `find src -name "*.java"`.
+> **Importante:** Ajusta la ruta según la ubicación real de tu archivo. Puedes verificarla con `find src -name "*.java"`.
 
 ## Ejemplo de uso
 
