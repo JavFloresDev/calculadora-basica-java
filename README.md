@@ -1,110 +1,60 @@
 # Calculadora Básica de Consola
 
-Calculadora simple desarrollada en Java que funciona completamente por consola. Permite realizar las cuatro operaciones básicas (suma, resta, multiplicación y división) de forma continua hasta que el usuario decide salir.
+Calculadora simple en Java que funciona por consola. Permite realizar suma, resta, multiplicación y división de forma continua hasta que el usuario decide salir.
 
 ## Características
 
-- Operaciones: suma (`+`), resta (`-`), multiplicación (`*`) y división (`/`)
+- Operaciones: suma (+), resta (-), multiplicación (*) y división (/)
 - Soporte para números enteros y decimales
 - Control de división por cero
 - Bucle continuo para realizar varias operaciones sin reiniciar el programa
-- Opción clara para salir escribiendo `salir` (también acepta `0 : 0` como salida rápida)
+- Salir escribiendo `salir`
 
-## Tecnologías utilizadas
+## Requisitos
 
-- Java (JDK 8 o superior)
-- Apache Ant (para compilar y ejecutar sin IDE)
-- NetBeans (IDE original del proyecto)
+- Java JDK 17 o superior
+- Apache Ant
 
-## Requisitos previos
+Instalación en Fedora:
 
-- Tener instalado el **JDK** (versión 8 o superior). Verifica con:
-  ```bash
-  java -version
-  javac -version
-  ```
-- Opcional pero recomendado: tener instalado **Apache Ant** si quieres compilar sin IDE:
-  ```bash
-  ant -version
-  ```
+```bash
+sudo dnf install java-17-openjdk-devel ant
+```
 
-## Cómo ejecutar el proyecto
+Instalación en Ubuntu/Debian:
 
-### Paso 1: Clonar el repositorio
+```bash
+sudo apt install openjdk-17-jdk ant
+```
+
+## Cómo ejecutar
 
 ```bash
 git clone https://github.com/JavFloresDev/calculadora-basica-java
-```
-
-### Paso 2: Entrar a la carpeta del proyecto
-
-```bash
 cd calculadora-basica-java
+chmod +x run.sh
+./run.sh
 ```
 
-### Paso 3: Elegir una forma de ejecución
+El script `run.sh` limpia, compila y ejecuta el proyecto automáticamente.
 
-#### Opción 1: Ejecutar el JAR ya compilado (la más fácil)
-
-El repositorio incluye una carpeta `dist/` con el archivo `.jar` ya generado. Solo ejecuta:
+### Alternativa con Ant
 
 ```bash
-java -jar dist/calculadora-basica-java.jar
+ant clean run
 ```
 
-> **Nota:** El nombre exacto del `.jar` puede variar. Revisa el contenido de `dist/` con `ls dist/`.
-
-#### Opción 2: Compilar y ejecutar con Apache Ant
-
-Si tienes Ant instalado, desde la raíz del proyecto:
+### Ejecutar el JAR ya compilado
 
 ```bash
-ant run
+java -jar dist/CalculadoraAnt.jar
 ```
-
-Otros comandos útiles:
-
-| Comando       | Descripción                          |
-|---------------|--------------------------------------|
-| `ant compile` | Solo compila el proyecto             |
-| `ant jar`     | Genera el archivo `.jar` en `dist/`  |
-| `ant clean`   | Limpia los archivos compilados       |
-| `ant run`     | Compila y ejecuta el programa        |
-
-#### Opción 3: Compilar manualmente con `javac`
-
-Si tu archivo `Calculadora.java` está dentro de un paquete (por ejemplo `calculadora`), la estructura sería:
-
-```
-src/
-└── calculadora/
-    └── Calculadora.java
-```
-
-En ese caso, compila y ejecuta así:
-
-```bash
-# Compilar (desde la raíz del proyecto)
-javac -d build/classes src/calculadora/Calculadora.java
-
-# Ejecutar (indicando el paquete)
-java -cp build/classes calculadora.Calculadora
-```
-
-Si tu archivo **no tiene paquete** y está directamente en `src/Calculadora.java`:
-
-```bash
-javac -d build/classes src/Calculadora.java
-java -cp build/classes Calculadora
-```
-
-> **Importante:** Ajusta la ruta según la ubicación real de tu archivo. Puedes verificarla con `find src -name "*.java"`.
 
 ## Ejemplo de uso
 
 ```
 === Calculadora Básica ===
-Operaciones disponibles: + - * /
+Operaciones: + - * /
 Escribe 'salir' para terminar.
 
 Primer número: 25
@@ -128,17 +78,27 @@ calculadora-basica-java/
 ├── build/          # Archivos compilados (generados)
 ├── dist/           # JAR ejecutable (generado)
 ├── nbproject/      # Configuración de NetBeans
-├── src/            # Código fuente Java
+├── src/            # Código fuente
 ├── build.xml       # Script de compilación de Ant
-├── manifest.mf     # Manifiesto del JAR
-├── LICENSE         # Licencia MIT
-└── README.md       # Este archivo
+├── run.sh          # Script de ejecución rápida
+├── LICENSE
+└── README.md
 ```
+
+## Problemas comunes
+
+**Error `invalid target release`**
+
+El proyecto está configurado para una versión de Java que no tienes. Abre el proyecto en NetBeans, ve a Properties → Build → Compile y selecciona una versión instalada en tu sistema.
+
+**Error `ant: command not found`**
+
+Instala Ant con el comando correspondiente a tu distribución (ver sección Requisitos).
 
 ## Autor
 
-**JavFloresDev** — Jhonny Flores
+JavFloresDev — Jhonny Flores
 
 ## Licencia
 
-Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+MIT. Consulta el archivo [LICENSE](LICENSE).
