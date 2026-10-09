@@ -22,7 +22,7 @@ Calculadora simple desarrollada en Java que funciona completamente por consola. 
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/[TU_USUARIO_GITHUB]/calculadora-basica-java.git
+git clone https://github.com/JavFloresDev/calculadora-basica-java
 ```
 2. Entrar a la carpeta del proyecto:
 ```bash
