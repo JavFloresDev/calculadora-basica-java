@@ -67,6 +67,10 @@ calculadora-basica-java/
 └── LICENSE
 ```
 
+## Capturas de pantalla
+
+![Calculadora en funcionamiento](images/calculadora.png)
+
 ## Autor
 
 JavFloresDev — Jhonny Flores
