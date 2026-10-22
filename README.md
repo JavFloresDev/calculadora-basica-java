@@ -5,10 +5,11 @@ Calculadora simple desarrollada en Java que funciona completamente por consola. 
 ## Características
 
 - Operaciones: suma (+), resta (-), multiplicación (*) y división (/)
+- Manejo de excepciones en ingreso de datos.
 - Soporte para números enteros y decimales
 - Control de división por cero
 - Bucle continuo para realizar varias operaciones sin reiniciar el programa
-- Opción clara para salir escribiendo `0 : 0`
+- Opción clara para salir escribiendo `salir`
 
 ## Requisitos
 
@@ -38,7 +39,7 @@ java -cp src Calculadora
 ```
 
 ## Ejemplo de uso
-```
+
 === Calculadora Básica ===
 Operaciones disponibles: +  -  *  /
 Escribe 'salir' para terminar.
@@ -53,9 +54,8 @@ Segundo número: 0
 Operación (+, -, *, /): /
 Error: No se puede dividir por cero.
 
-Primer número: 0 : 0
-¡Hasta luego!
-```
+Primer número: salir
+Adios...
 
 ## Estructura del proyecto
 
